@@ -1,52 +1,52 @@
-def MergeSort(A:list , lb ,ub ):
-  if lb > ub :
-    return A 
-  else :
-    mid = (lb+ub)/2 
-    MergeSort(A , mid+1, ub)
-    MergeSort(A , lb , mid )
-    Merge(A, lb , ub , mid )
-    
-    
-def Merge(A , lb , ub , mid ):
-  i=lb 
-  j=mid+1
-  k=lb 
+def MergeSort(A:list ):
   
-  while i<= mid and j <= ub :
-    if A[i]<= A[j]:
-      A[k]=A[i]
+  if len(A)>1 :
+    mid = int(len(A)/2)
+    rightHalf=A[:mid]
+    leftHalf=A[mid:]
+    # i=0
+    # for i in range(mid-1):
+    #   rightHalf[i]=A[i]
+    # j=mid
+    # for j in range(ub):
+    #   leftHalf[j]=A[j]  
+      
+    MergeSort(rightHalf)
+    MergeSort(leftHalf)
+    return Merge(A , rightHalf, leftHalf)
+    
+    
+def Merge(A, rightHalf, leftHalf):
+  i=0 
+  j=0
+  k=0
+  while i< len(rightHalf) and j <len(leftHalf) :
+    if rightHalf[i]< leftHalf[j]:
+      A[k]=rightHalf[i]
       i+=1
     else :
-      A[k]= A[j]
+      A[k]= leftHalf[j]
       j+=1
-  k+=1  
+    k+=1  
   
-  if i > mid :
-    while j <= ub :
-      A[k]=A[j]
+  # if j > len(rightHalf) :
+  while j < len(leftHalf) :
+      A[k]=leftHalf[j]
       j+=1
       k+=1
-  else :
-    while i <= mid :
-      A[k]=A[i]
+  # else :
+  while i < len(rightHalf) :
+      A[k]=rightHalf[i]
       i+=1
       k+=1  
-  k=ub
-  B=[]
-  for k in range(ub) :
-    A[k]=B[k]
-    
-  return B
-    
+  return A
       
     
     
     
-A=[8,5,6,3,12,6,43,0,2]    
-lb=0
-ub=len(A)-1
-result= MergeSort(A, lb , ub )
+A=[8,5,6,3,12,6,43,0]    
+print(A)
+result=MergeSort(A)
 print(result)
 
   
