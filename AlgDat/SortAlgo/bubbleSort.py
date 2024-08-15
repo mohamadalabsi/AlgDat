@@ -9,7 +9,7 @@ def BubbleSort(A , n):
         flag+=1
     if flag==0 :
       break
-    
+  return A  
     
     
     
@@ -17,6 +17,6 @@ def BubbleSort(A , n):
 A=[2,3,5,1,6,44,7]
 n=len(A)
 print(A)
-BubbleSort(A,n)        
-print(A)
+result=BubbleSort(A,n)        
+print(result)
         
