@@ -1,1 +1,1 @@
-output
+(len(A))
