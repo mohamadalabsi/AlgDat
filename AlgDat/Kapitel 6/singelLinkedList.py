@@ -40,7 +40,15 @@ class LinkedList:
             temp=temp.next
             prev=prev.next
         prev.next=None     
-            
+    
+    def delete_at_position(self, pos ):
+        temp=self.head.next
+        prev=self.head
+        for i in range(pos-1):
+            temp=temp.next
+            prev=prev.next 
+        prev.next= temp.next
+        temp.next=None    
 
     def delete_node(self, key):
         temp = self.head
@@ -57,12 +65,19 @@ class LinkedList:
         prev.next = temp.next
         temp = None
 
+        
     def print_list(self):
         temp = self.head
-        while temp:
-            print(temp.data, end=" -> ")
-            temp = temp.next
-        print("None")
+        if self.head is None :
+          print("the list is Empty ")
+        else : 
+          while temp:
+              print(temp.data, end=" -> ")
+              temp = temp.next
+          print("None")    
+        
+        
+        
 
 # Example usage
 ll = LinkedList()
@@ -72,7 +87,8 @@ ll.insert_at_end(3)
 ll.insert_at_beginning(55)
 ll.insert_at_position(2,33)
 ll.print_list()
-ll.delete_at_beginning()
-ll.delete_node(33)
-ll.delete_at_end()
+# ll.delete_at_beginning()
+# ll.delete_node(33)
+# ll.delete_at_end()
+ll.delete_at_position(2)
 ll.print_list()
