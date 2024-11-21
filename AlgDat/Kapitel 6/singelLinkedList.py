@@ -16,6 +16,7 @@ class LinkedList:
         while last.next:
             last = last.next
         last.next = new_node
+        print(self.head.data)
     def insert_at_beginning (self, data):
         new_node = Node(data)
         new_node.next=self.head
@@ -84,11 +85,11 @@ ll = LinkedList()
 ll.insert_at_end(1)
 ll.insert_at_end(2)
 ll.insert_at_end(3)
-ll.insert_at_beginning(55)
-ll.insert_at_position(2,33)
-ll.print_list()
-# ll.delete_at_beginning()
-# ll.delete_node(33)
-# ll.delete_at_end()
-ll.delete_at_position(2)
-ll.print_list()
+# ll.insert_at_beginning(55)
+# ll.insert_at_position(2,33)
+# ll.print_list()
+# # ll.delete_at_beginning()
+# # ll.delete_node(33)
+# # ll.delete_at_end()
+# ll.delete_at_position(2)
+# ll.print_list()
