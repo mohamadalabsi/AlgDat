@@ -11,7 +11,9 @@
 # pp(stack[3][1])
 # pp(stack)
 
+# here like u see u can use pre build collection like list  ,   java with linked list ,  stack and deque see the images 
 
+# in stacks we can use linked list or normal array
 class Node:
     def __init__(self, value):
         self.value = value

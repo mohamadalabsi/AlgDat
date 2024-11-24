@@ -1,3 +1,7 @@
+# in java there is pre build collection called hashMap or LinkedHashMap 
+
+
+
 from pprint import  pprint as pp
 
 class HashTable:

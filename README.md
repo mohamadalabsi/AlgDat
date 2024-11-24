@@ -1,1 +1,1 @@
-some algorithms  and data structure 
+some algorithms and data structure 
