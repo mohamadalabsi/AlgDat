@@ -1,5 +1,6 @@
 # now here priority queue uses heap 
 # u can use priority queue with a simple  list and for the best like heap sort or use pre build collection like heapq , and in java PriorityQueue 
+# from scratch u have to make it like a heap sort 
 
 
 

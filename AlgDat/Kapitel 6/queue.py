@@ -2,10 +2,11 @@
 # myyList=deque()
 # myyList.appendleft()
 
-# here like u see u can use pre build collection like deque  ,   java with linked list 
+# from scratch like others or  java with linked list 
 
-
-# in queue we can use linked list or normal array
+# from scratch using class with a list to Simulate a Queue or linked list 
+# with list alone with manipulation 
+# with deque form pre build collection 
 class Node:
     def __init__(self, value):
         self.value = value

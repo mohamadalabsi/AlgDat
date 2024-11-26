@@ -1,4 +1,4 @@
-# from pprint import  pprint as pp
+from pprint import  pprint as pp
 
 # stack=[]
 # stack.append(1)
@@ -11,9 +11,12 @@
 # pp(stack[3][1])
 # pp(stack)
 
-# here like u see u can use pre build collection like list  ,   java with linked list ,  stack and deque see the images 
+# from scratch like others or  java with linked list ,  stack and deque see the images 
 
-# in stacks we can use linked list or normal array
+
+
+# from scratch using class with  linked list 
+# with list alone 
 class Node:
     def __init__(self, value):
         self.value = value
